@@ -1,0 +1,18 @@
+server:
+  port: 8889  # Port on which the API Gateway will run
+
+spring:
+  application:
+    name: gateway  # Name of the application
+
+  config:
+    import: optional:configserver:http://localhost:8888  # Optional Config Server URL
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  # Enable service discovery for routing
+
+
+
